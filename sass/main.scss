@@ -62,11 +62,29 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
-$modular-scale-ratio: $golden;
-$modular-scale-base: 1.1em;
+$modular-scale-ratio: $minor-second;
+$modular-scale-base: 1.3em;
 
 body {
     background:#CABB9F;
+    color: #42261B;
+    font-family: "ff-tisa-web-pro",serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+h1{
+    color: #BD1622;
+}
+h2 {
+    margin-bottom: 0.1em;
+    font-family: "jubilat",sans-serif;
+    font-weight: 400;
+    font-size: modular-scale(0);
+    text-transform: uppercase;
+    color: #BD1622;
+}
+p {
+    margin-top: 0;
 }
 .main {
     width:100%;
@@ -88,24 +106,61 @@ body {
 }
 .column {
     @include span-columns(4);
-}
-.column-team {
-    @include span-columns(3);
-    font-size: modular-scale(-1);
-}
-.intro {
-    font-size: modular-scale(1);
-    h1 {
-        line-height: 1.2;
-        margin-bottom: 0.4em;
+    h3 {
+        font-size: modular-scale(-3);
+        margin-bottom: 0.2em;
     }
     p {
         margin-top: 0;
     }
 }
-.subintro {
+.intro {
+    text-align: center;
+    font-size: modular-scale(3);
+    font-family: "jubilat",sans-serif;
+    h1 {
+        line-height: 1.2;
+        margin-bottom: 0;
+        font-weight: 400;
+    }
+    p {
+        margin-top: 0;
+        color: black;
+    }
+}
+.subintro, .team {
     font-size: modular-scale(0);
 }
+.column-team {
+    @include span-columns(5);
+    h4 {
+        margin-bottom: 0;
+    }
+}
+.footer {
+    width: 100%;
+    margin-top: 3em;
+    padding:0.5em 0 3em 0;
+    background-color: #BD1622;
+    color:white;
+    font-size: modular-scale(3);
+    h3{
+        margin-bottom: 0.4em;
+        text-transform: uppercase;
+        font-family: "jubilat",sans-serif;
+        font-size: modular-scale(3);
+        font-weight: 400;
+    }
+    a {
+        color: white;
+        font-weight: bold;
+        text-decoration: none;
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
+
 
 
 

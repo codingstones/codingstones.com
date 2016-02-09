@@ -55,7 +55,25 @@ textarea {
    Author's custom styles
    ========================================================================== */
 body {
-  background: #CABB9F; }
+  background: #CABB9F;
+  color: #42261B;
+  font-family: "ff-tisa-web-pro",serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+h1 {
+  color: #BD1622; }
+
+h2 {
+  margin-bottom: 0.1em;
+  font-family: "jubilat",sans-serif;
+  font-weight: 400;
+  font-size: 1.3em;
+  text-transform: uppercase;
+  color: #BD1622; }
+
+p {
+  margin-top: 0; }
 
 .main {
   width: 100%; }
@@ -92,26 +110,56 @@ body {
   width: 31.7615656014%; }
   .column:last-child {
     margin-right: 0; }
+  .column h3 {
+    font-size: 1.0701634004em;
+    margin-bottom: 0.2em; }
+  .column p {
+    margin-top: 0; }
+
+.intro {
+  text-align: center;
+  font-size: 1.5791980919em;
+  font-family: "jubilat",sans-serif; }
+  .intro h1 {
+    line-height: 1.2;
+    margin-bottom: 0;
+    font-weight: 400; }
+  .intro p {
+    margin-top: 0;
+    color: black; }
+
+.subintro, .team {
+  font-size: 1.3em; }
 
 .column-team {
   float: left;
   display: block;
   margin-right: 2.3576515979%;
-  width: 23.2317613015%;
-  font-size: 0.6798516687em; }
+  width: 40.2913699012%; }
   .column-team:last-child {
     margin-right: 0; }
+  .column-team h4 {
+    margin-bottom: 0; }
 
-.intro {
-  font-size: 1.7798em; }
-  .intro h1 {
-    line-height: 1.2;
-    margin-bottom: 0.4em; }
-  .intro p {
-    margin-top: 0; }
-
-.subintro {
-  font-size: 1.1em; }
+.footer {
+  width: 100%;
+  margin-top: 3em;
+  padding: 0.5em 0 3em 0;
+  background-color: #BD1622;
+  color: white;
+  font-size: 1.5791980919em; }
+  .footer h3 {
+    margin-bottom: 0.4em;
+    text-transform: uppercase;
+    font-family: "jubilat",sans-serif;
+    font-size: 1.5791980919em;
+    font-weight: 400; }
+  .footer a {
+    color: white;
+    font-weight: bold;
+    text-decoration: none; }
+    .footer a:hover {
+      text-decoration: underline; }
 
 /* ==========================================================================
    Media Queries
