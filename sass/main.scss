@@ -88,7 +88,10 @@ body {
 }
 .column {
     @include span-columns(4);
-    outline: 1px solid rgba(255,0,0,0.2);
+}
+.column-team {
+    @include span-columns(3);
+    font-size: modular-scale(-1);
 }
 .intro {
     font-size: modular-scale(1);

@@ -89,9 +89,17 @@ body {
   float: left;
   display: block;
   margin-right: 2.3576515979%;
-  width: 31.7615656014%;
-  outline: 1px solid rgba(255, 0, 0, 0.2); }
+  width: 31.7615656014%; }
   .column:last-child {
+    margin-right: 0; }
+
+.column-team {
+  float: left;
+  display: block;
+  margin-right: 2.3576515979%;
+  width: 23.2317613015%;
+  font-size: 0.6798516687em; }
+  .column-team:last-child {
     margin-right: 0; }
 
 .intro {
