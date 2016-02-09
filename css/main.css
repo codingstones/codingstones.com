@@ -61,7 +61,7 @@ body {
   width: 100%; }
 
 .container {
-  width: 60%;
+  width: 70%;
   margin: 0 auto;
   max-width: 68em;
   margin-left: auto;
@@ -79,9 +79,11 @@ body {
   .full:last-child {
     margin-right: 0; }
 
-.logo img {
-  width: 100%;
-  height: auto; }
+.logo {
+  padding: 3em 0; }
+  .logo img {
+    width: 100%;
+    height: auto; }
 
 .column {
   float: left;
@@ -91,6 +93,17 @@ body {
   outline: 1px solid rgba(255, 0, 0, 0.2); }
   .column:last-child {
     margin-right: 0; }
+
+.intro {
+  font-size: 1.7798em; }
+  .intro h1 {
+    line-height: 1.2;
+    margin-bottom: 0.4em; }
+  .intro p {
+    margin-top: 0; }
+
+.subintro {
+  font-size: 1.1em; }
 
 /* ==========================================================================
    Media Queries
