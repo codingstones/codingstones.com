@@ -3,13 +3,16 @@
 
 # TEAM
 
-    <name> -- <role> -- <twitter>
-
-# THANKS
-
-    <name>
+    Jesus Cuadra    - Designer                     - @tallergorilas
+    Alberto Gualis  - Frontend                     - @gualison
+    Dani Latorre    - Beer Drive Development       - @dani_latorre
+    Javier Rubio    - Frontend                     - @jrubr
+    Nestor Salceda  - Backend                      - @nestorsalceda
 
 # TECHNOLOGY COLOPHON
 
     HTML5, CSS3
-    jQuery, Modernizr
+    Modernizr
+    HTML5Boilerplate, Bourbon, Bourbon Neat
+
+    Made with rock and roll in Zaragoza
