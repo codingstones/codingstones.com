@@ -120,10 +120,6 @@ $(window).load(function () {
 
 
 
-
-
-
-
 /*------------------------------------*\
   Event Variables
 \*------------------------------------*/
@@ -190,8 +186,10 @@ $(window).load(function () {
 
     this.each(function() {
       //
-      var $self = $(this);
-      $self.fitText(-1);
+      var $self = $(this).find('h1');
+      if (Modernizr.mq('only screen and (min-device-width: 1025px)')) {
+        //$self.fitText(0.7);
+      }
     //
     });
     return this;

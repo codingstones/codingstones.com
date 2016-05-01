@@ -1,0 +1,36 @@
+{
+  "name": "reflex-grid",
+  "version": "1.1.0",
+  "homepage": "https://github.com/leejordan/reflex/docs/",
+  "authors": [
+    "Lee Jordan <ldjordan@gmail.com>"
+  ],
+  "description": "responsive flexbox grid with inline-block legacy support",
+  "main": "css/reflex.css",
+  "keywords": [
+    "reflex",
+    "flexbox",
+    "responsive",
+    "inline-block",
+    "fallback",
+    "grid"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "_release": "1.1.0",
+  "_resolution": {
+    "type": "version",
+    "tag": "1.1.0",
+    "commit": "56ad025df1c31b55aff8a2ab9f8f64e325a7b35e"
+  },
+  "_source": "https://github.com/leejordan/reflex.git",
+  "_target": "^1.1.0",
+  "_originalSource": "reflex-grid",
+  "_direct": true
+}

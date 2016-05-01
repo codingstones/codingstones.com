@@ -3,6 +3,7 @@
 }
 
 @import "bourbon", "neat";
+@import "../bower_components/reflex-grid/scss/reflex";
 
 /*! HTML5 Boilerplate v5.0 | MIT License | http://h5bp.com/ */
 
@@ -27,7 +28,7 @@ hr {
     height: 1px;
     border: 0;
     border-top: 1px solid #ccc;
-    margin: 1rem 0;
+    margin: 2rem 0;
     padding: 0;
 }
 
@@ -112,20 +113,24 @@ textarea {
    Coding Stones
    ========================================================================== */
 
-$modular-scale-ratio: $minor-second;
-$modular-scale-base: 1.3em;
-$bg-intro-color: #E8E5D9;
+$modular-scale-ratio:   $minor-second;
+$modular-scale-base:    1.3em;
+$bg-color:              #FFF;
+$text-color:            #1C1C1C;
+$accent-color:          #BD1622;
+$bg-intro-color:        #E8E5D9;
+$grey:                  #BBBBBB;
 
 body {
-    background:#FFF;
-    color: #1C1C1C;
+    background:$bg-color;
+    color:$text-color;
     font-family: "Cooper Hewitt Book", "cooper_hewittbook", Helvetica, Arial, sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     font-size: 0.8em;
 }
 h1{
-    color: #BD1622;
+    color:$accent-color;
     font-size: modular-scale(3);
 }
 h2 {
@@ -134,38 +139,56 @@ h2 {
     font-weight: 700;
     font-size: modular-scale(2);
     text-transform: uppercase;
-    color: #BD1622;
+    color: $accent-color;
 }
 h3, h4 {
     font-family: "Oswald", Helvetica, Arial, sans-serif;
     font-weight: 700;
     font-size: modular-scale(1);
     text-transform: uppercase;
-    margin-bottom: 0.2em;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+h3 {
+    span {
+        display: inline-block;
+        margin-right: 0.2em;
+        font-size: modular-scale(3);
+        font-family: "Playfair Display","Times New Roman", Times, sans-serif;
+        font-style:italic;
+        font-weight:900;
+        color: $grey;
+    }
 }
 p {
     margin-top: 0;
+    line-height: 1.5;
+}
+a {
+    color:$text-color;
+    text-decoration: none;
+    @include transition (color 0.2s ease);
+    &:hover {
+        color:$accent-color;
+    }
 }
 .main {
     width:100%;
 }
 .container {
-    width: 90%;
+    width: 80%;
     margin: 0 auto;
-    @include outer-container;
 }
 .colored {
     width: 100%;
     padding: 0 5%;
     background-color: $bg-intro-color;
 }
-.full, .half {
-    @include span-columns(12);
-}
 .logo {
     position: absolute;
     left:1rem;
-    top:1rem;
+    top:2rem;
     width:6rem;
     img {
         width: 100%;
@@ -173,13 +196,25 @@ p {
     }
 }
 .column {
-    @include span-columns(12);
     p {
         margin-top: 0;
+        font-size: modular-scale(-1);
+        margin-left:1.3rem;
+    }
+}
+
+.column-team {
+    p {
+        margin-top: 0;
+        margin-bottom: 0;
+        font-size: modular-scale(-2);
     }
 }
 .intro {
-    margin-top: 8rem;
+    position: relative;
+    padding-top: 8rem;
+    padding-bottom: 1rem;
+    font-weight: bold;
 }
 .lead {
     font-size: modular-scale(8);
@@ -192,19 +227,33 @@ p {
         font-weight:900;
     }
 }
+.lead-list {
+    position: absolute;
+    top:4.5rem;
+    right:0;
+    ul {
+        margin:0;
+        list-style: none;
+        font-size: 1.1rem;
+        text-transform: uppercase;
+        font-family: "Oswald", Helvetica, Arial, sans-serif;
+        font-weight: 700;
+        line-height: 1.2;
+        text-align: right;
+    }
+}
 .sublead {
     margin-top: 1rem;
     p {
         margin-top: 0;
         font-size: modular-scale(1.5);
-        color: black;
+        color: $text-color;
     }
 }
 .subintro, .half, .team {
     font-size: modular-scale(0);
 }
 .column-team {
-    @include span-columns(12);
     h4 {
         margin-bottom: 0;
     }
@@ -213,7 +262,7 @@ p {
     width: 100%;
     margin-top: 3em;
     padding:0.5em 0 3em 0;
-    background-color: #BD1622;
+    background-color: $accent-color;
     color:white;
     font-size: modular-scale(-1);
     h3{
@@ -276,29 +325,64 @@ p {
 
 @media only screen and (min-width: 35em) {
     body {
-        font-size: 1em;
+        font-size: modular-scale(0);
     }
     h1 {
+        margin-bottom: 0.2em;
+        font-family: "Playfair Display","Times New Roman", Times, sans-serif;
+        font-style:italic;
+        font-weight:900;
+        font-size: 13vw;
+        line-height: 0.9 !important;
+        text-transform: none;
+    }
+    h2 {
         font-size: modular-scale(6);
     }
     .container {
-        width:70%;
+        min-height: 80vh;
+        &.colored {
+            width: 100%;
+            max-width: 100%;
+        }
+        .footer & {
+            min-height: 0;
+        }
+        p {
+            max-width: 65%;
+        }
+    }
+    .sublead {
+        p {
+            max-width: 90%;
+        }
     }
     .column {
-        @include span-columns(4);
+        p {
+            max-width: 100%;
+            font-size: modular-scale(-3);
+        }
     }
     .column-team {
-        @include span-columns(5);
+        p {
+            max-width: 100%;
+            font-size: modular-scale(-3);
+        }
     }
     .logo {
         position: fixed;
-        padding: 3em 0;
+        z-index: 100;
     }
     .intro {
-        text-align: center;
-        font-size: modular-scale(3);
         h1 {
-            margin-top: 0.67em;
+            margin-top: 0;
+        }
+    }
+    .lead-list {
+        top:4.5rem;
+        right:0;
+        ul {
+            font-size: 3vw;
         }
     }
     .footer {
@@ -306,6 +390,12 @@ p {
         p {
             font-size: modular-scale(-4);
         }
+    }
+    .sublogo {
+        display: none;
+    }
+    .subnav {
+        margin-top: -5rem;
     }
 }
 
