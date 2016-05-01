@@ -27,7 +27,7 @@ hr {
     height: 1px;
     border: 0;
     border-top: 1px solid #ccc;
-    margin: 1em 0;
+    margin: 1rem 0;
     padding: 0;
 }
 
@@ -114,10 +114,11 @@ textarea {
 
 $modular-scale-ratio: $minor-second;
 $modular-scale-base: 1.3em;
+$bg-intro-color: #E8E5D9;
 
 body {
-    background:#CABB9F;
-    color: #42261B;
+    background:#FFF;
+    color: #1C1C1C;
     font-family: "Cooper Hewitt Book", "cooper_hewittbook", Helvetica, Arial, sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -131,9 +132,16 @@ h2 {
     margin-bottom: 0.1em;
     font-family: "Oswald", Helvetica, Arial, sans-serif;
     font-weight: 700;
-    font-size: modular-scale(0);
+    font-size: modular-scale(2);
     text-transform: uppercase;
     color: #BD1622;
+}
+h3, h4 {
+    font-family: "Oswald", Helvetica, Arial, sans-serif;
+    font-weight: 700;
+    font-size: modular-scale(1);
+    text-transform: uppercase;
+    margin-bottom: 0.2em;
 }
 p {
     margin-top: 0;
@@ -146,11 +154,19 @@ p {
     margin: 0 auto;
     @include outer-container;
 }
-.full {
+.colored {
+    width: 100%;
+    padding: 0 5%;
+    background-color: $bg-intro-color;
+}
+.full, .half {
     @include span-columns(12);
 }
 .logo {
-    padding: 1em 0;
+    position: absolute;
+    left:1rem;
+    top:1rem;
+    width:6rem;
     img {
         width: 100%;
         height: auto;
@@ -158,31 +174,33 @@ p {
 }
 .column {
     @include span-columns(12);
-    h3 {
-        font-size: modular-scale(-3);
-        margin-bottom: 0.2em;
-    }
     p {
         margin-top: 0;
     }
 }
 .intro {
-    font-size: modular-scale(1);
-    font-family: "Playfair Display","Times New Roman", Times, sans-serif;
-    font-style:italic;
-    font-weight:900;
+    margin-top: 8rem;
+}
+.lead {
+    font-size: modular-scale(8);
     h1 {
-        line-height: 1.2;
+        line-height: 0.9;
         margin-top: 0;
         margin-bottom: 0;
-        font-weight: 400;
+        font-family: "Playfair Display","Times New Roman", Times, sans-serif;
+        font-style:italic;
+        font-weight:900;
     }
+}
+.sublead {
+    margin-top: 1rem;
     p {
         margin-top: 0;
+        font-size: modular-scale(1.5);
         color: black;
     }
 }
-.subintro, .team {
+.subintro, .half, .team {
     font-size: modular-scale(0);
 }
 .column-team {
@@ -201,12 +219,12 @@ p {
     h3{
         margin-bottom: 0.4em;
         text-transform: uppercase;
-        font-family: "jubilat",sans-serif;
-        font-size: modular-scale(3);
-        font-weight: 400;
+        font-family: "Oswald", Helvetica, Arial, sans-serif;
+        font-weight: 700;
+        font-size: modular-scale(6);
     }
     p {
-        font-size: modular-scale(-5);
+        font-size: modular-scale(-1);
     }
     a {
         color: white;
@@ -215,6 +233,26 @@ p {
         &:hover {
             text-decoration: underline;
         }
+    }
+}
+.sublogo {
+    float:left;
+    width:4rem;
+    img {
+        width: 100%;
+        height: auto;
+    }
+}
+.subnav {
+    float:right;
+    a {
+        display: block;
+        padding:1rem;
+        width:3.2rem;
+    }
+    img {
+        width: 100%;
+        height: auto;
     }
 }
 
@@ -253,6 +291,7 @@ p {
         @include span-columns(5);
     }
     .logo {
+        position: fixed;
         padding: 3em 0;
     }
     .intro {

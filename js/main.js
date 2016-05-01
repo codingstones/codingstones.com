@@ -191,7 +191,7 @@ $(window).load(function () {
     this.each(function() {
       //
       var $self = $(this);
-      $self.fitText(1);
+      $self.fitText(-1);
     //
     });
     return this;
