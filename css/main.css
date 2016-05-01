@@ -853,7 +853,8 @@ a {
   width: 100%; }
 
 .container {
-  width: 80%;
+  width: 90%;
+  max-width: 100%;
   margin: 0 auto; }
 
 .colored {
@@ -894,7 +895,8 @@ a {
     margin-bottom: 0;
     font-family: "Playfair Display","Times New Roman", Times, sans-serif;
     font-style: italic;
-    font-weight: 900; }
+    font-weight: 900;
+    letter-spacing: -0.03em; }
 
 .lead-list {
   position: absolute;
@@ -909,6 +911,9 @@ a {
     font-weight: 700;
     line-height: 1.2;
     text-align: right; }
+
+.rockandroll {
+  display: none; }
 
 .sublead {
   margin-top: 1rem; }
@@ -965,7 +970,7 @@ a {
 /* ==========================================================================
    Media Queries
    ========================================================================== */
-@media only screen and (min-width: 35em) {
+@media only screen and (min-width: 768px) {
   body {
     font-size: 1.3em; }
   h1 {
@@ -973,12 +978,15 @@ a {
     font-family: "Playfair Display","Times New Roman", Times, sans-serif;
     font-style: italic;
     font-weight: 900;
-    font-size: 13vw;
+    font-size: 14vw;
     line-height: 0.9 !important;
-    text-transform: none; }
+    text-transform: none;
+    letter-spacing: -0.03em;
+    color: #1C1C1C; }
   h2 {
     font-size: 1.9183589334em; }
   .container {
+    width: 80%;
     min-height: 80vh; }
     .container.colored {
       width: 100%;
@@ -987,10 +995,15 @@ a {
       min-height: 0; }
     .container p {
       max-width: 65%; }
-  .sublead p {
-    max-width: 90%; }
+  .sublead {
+    width: 90%;
+    margin: 3rem auto 0 auto; }
+    .sublead p {
+      max-width: 90%;
+      color: #BD1622; }
   .column p {
     max-width: 100%;
+    margin-left: 2rem;
     font-size: 1.0701634004em; }
   .column-team p {
     max-width: 100%;
@@ -1002,9 +1015,26 @@ a {
     margin-top: 0; }
   .lead-list {
     top: 4.5rem;
-    right: 0; }
+    right: 10vw; }
     .lead-list ul {
       font-size: 3vw; }
+  .rockandroll {
+    display: block;
+    position: absolute;
+    top: -1rem;
+    right: -11vw;
+    width: 10vw;
+    font-size: 5vw;
+    text-transform: uppercase;
+    font-family: "Oswald", Helvetica, Arial, sans-serif;
+    font-weight: 700;
+    line-height: 1;
+    text-align: left;
+    color: #BD1622; }
+    .rockandroll .and {
+      font-family: "Playfair Display","Times New Roman", Times, sans-serif;
+      font-style: italic;
+      font-weight: 900; }
   .footer {
     font-size: 1.5791980919em; }
     .footer p {
@@ -1012,7 +1042,9 @@ a {
   .sublogo {
     display: none; }
   .subnav {
-    margin-top: -5rem; } }
+    margin-top: -5rem; }
+    .subnav a {
+      width: 4.2rem; } }
 
 /* ==========================================================================
    Helper classes

@@ -117,7 +117,7 @@ $(window).load(function () {
 
 /* ---------------------------------- */
 
-
+$('.up').smoothScroll();
 
 
 /*------------------------------------*\
@@ -199,7 +199,7 @@ $(window).load(function () {
 
 
 /* ButtonAction */
-(function ($) {
+/*(function ($) {
   $.fn.ButtonAction = function (settings){
     var config = {};
     if (settings) $.extend(config, settings);
@@ -214,7 +214,7 @@ $(window).load(function () {
     });
     return this;
   }
-})(jQuery);
+})(jQuery);*/
 
 
 

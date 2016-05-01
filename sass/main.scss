@@ -129,7 +129,7 @@ body {
     -moz-osx-font-smoothing: grayscale;
     font-size: 0.8em;
 }
-h1{
+h1 {
     color:$accent-color;
     font-size: modular-scale(3);
 }
@@ -177,7 +177,8 @@ a {
     width:100%;
 }
 .container {
-    width: 80%;
+    width: 90%;
+    max-width: 100%;
     margin: 0 auto;
 }
 .colored {
@@ -225,6 +226,7 @@ a {
         font-family: "Playfair Display","Times New Roman", Times, sans-serif;
         font-style:italic;
         font-weight:900;
+        letter-spacing: -0.03em;
     }
 }
 .lead-list {
@@ -241,6 +243,9 @@ a {
         line-height: 1.2;
         text-align: right;
     }
+}
+.rockandroll {
+    display: none;
 }
 .sublead {
     margin-top: 1rem;
@@ -323,7 +328,7 @@ a {
    Media Queries
    ========================================================================== */
 
-@media only screen and (min-width: 35em) {
+@media only screen and (min-width: 768px) {
     body {
         font-size: modular-scale(0);
     }
@@ -332,14 +337,17 @@ a {
         font-family: "Playfair Display","Times New Roman", Times, sans-serif;
         font-style:italic;
         font-weight:900;
-        font-size: 13vw;
+        font-size: 14vw;
         line-height: 0.9 !important;
         text-transform: none;
+        letter-spacing: -0.03em;
+        color: $text-color;
     }
     h2 {
         font-size: modular-scale(6);
     }
     .container {
+        width: 80%;
         min-height: 80vh;
         &.colored {
             width: 100%;
@@ -353,13 +361,17 @@ a {
         }
     }
     .sublead {
+        width: 90%;
+        margin: 3rem auto 0 auto;
         p {
             max-width: 90%;
+            color: $accent-color;
         }
     }
     .column {
         p {
             max-width: 100%;
+            margin-left: 2rem;
             font-size: modular-scale(-3);
         }
     }
@@ -380,9 +392,28 @@ a {
     }
     .lead-list {
         top:4.5rem;
-        right:0;
+        right:10vw;
         ul {
             font-size: 3vw;
+        }
+    }
+    .rockandroll {
+        display: block;
+        position: absolute;
+        top:-1rem;
+        right:-11vw;
+        width: 10vw;
+        font-size: 5vw;
+        text-transform: uppercase;
+        font-family: "Oswald", Helvetica, Arial, sans-serif;
+        font-weight: 700;
+        line-height: 1;
+        text-align: left;
+        color: $accent-color;
+        .and {
+            font-family: "Playfair Display","Times New Roman", Times, sans-serif;
+            font-style:italic;
+            font-weight:900;
         }
     }
     .footer {
@@ -396,6 +427,9 @@ a {
     }
     .subnav {
         margin-top: -5rem;
+        a {
+            width:4.2rem;
+        }
     }
 }
 
