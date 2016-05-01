@@ -52,12 +52,36 @@ textarea {
   padding: 0.2em 0; }
 
 /* ==========================================================================
-   Author's custom styles
+   Fonts
+   ========================================================================== */
+@font-face {
+  font-family: 'cooper_hewittbook';
+  src: url("../fonts/cooperhewitt-book-webfont.eot");
+  src: url("../fonts/cooperhewitt-book-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/cooperhewitt-book-webfont.woff2") format("woff2"), url("../fonts/cooperhewitt-book-webfont.woff") format("woff"), url("../fonts/cooperhewitt-book-webfont.ttf") format("truetype"), url("../fonts/cooperhewitt-book-webfont.svg#cooper_hewittbook") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'cooper_hewittbook';
+  src: url("../fonts/cooperhewitt-bookitalic-webfont.eot");
+  src: url("../fonts/cooperhewitt-bookitalic-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/cooperhewitt-bookitalic-webfont.woff2") format("woff2"), url("../fonts/cooperhewitt-bookitalic-webfont.woff") format("woff"), url("../fonts/cooperhewitt-bookitalic-webfont.ttf") format("truetype"), url("../fonts/cooperhewitt-bookitalic-webfont.svg#cooper_hewittbook_italic") format("svg");
+  font-weight: normal;
+  font-style: italic; }
+
+@font-face {
+  font-family: 'cooper_hewittbook';
+  src: url("../fonts/cooperhewitt-medium-webfont.eot");
+  src: url("../fonts/cooperhewitt-medium-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/cooperhewitt-medium-webfont.woff2") format("woff2"), url("../fonts/cooperhewitt-medium-webfont.woff") format("woff"), url("../fonts/cooperhewitt-medium-webfont.ttf") format("truetype"), url("../fonts/cooperhewitt-medium-webfont.svg#cooper_hewittmedium") format("svg");
+  font-weight: bold;
+  font-style: normal; }
+
+/* ==========================================================================
+   Coding Stones
    ========================================================================== */
 body {
   background: #CABB9F;
   color: #42261B;
-  font-family: "ff-tisa-web-pro",serif;
+  font-family: "Cooper Hewitt Book", "cooper_hewittbook", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-size: 0.8em; }
@@ -68,8 +92,8 @@ h1 {
 
 h2 {
   margin-bottom: 0.1em;
-  font-family: "jubilat",sans-serif;
-  font-weight: 400;
+  font-family: "Oswald", Helvetica, Arial, sans-serif;
+  font-weight: 700;
   font-size: 1.3em;
   text-transform: uppercase;
   color: #BD1622; }
@@ -120,7 +144,9 @@ p {
 
 .intro {
   font-size: 1.3871em;
-  font-family: "jubilat",sans-serif; }
+  font-family: "Playfair Display","Times New Roman", Times, sans-serif;
+  font-style: italic;
+  font-weight: 900; }
   .intro h1 {
     line-height: 1.2;
     margin-top: 0;
