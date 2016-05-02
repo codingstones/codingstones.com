@@ -346,6 +346,9 @@ a {
     h2 {
         font-size: modular-scale(6);
     }
+    h3 {
+        font-size: modular-scale(0);
+    }
     .container {
         width: 80%;
         min-height: 80vh;
@@ -432,6 +435,20 @@ a {
         }
     }
 }
+
+
+@media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px)  {
+    //iPad
+    body {
+        font-size: modular-scale(-4);
+    }
+    .container {
+        min-height: 60vh;
+    }
+}
+
 
 @media print,
        (-o-min-device-pixel-ratio: 5/4),

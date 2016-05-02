@@ -258,6 +258,8 @@ a {
     color: #1C1C1C; }
   h2 {
     font-size: 1.9183589334em; }
+  h3 {
+    font-size: 1.3em; }
   .container {
     width: 80%;
     min-height: 80vh; }
@@ -318,6 +320,12 @@ a {
     margin-top: -5rem; }
     .subnav a {
       width: 4.2rem; } }
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+  body {
+    font-size: 1.0029647614em; }
+  .container {
+    min-height: 60vh; } }
 
 /* ==========================================================================
    Helper classes
