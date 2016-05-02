@@ -2,8 +2,7 @@
     position:relative;
 }
 
-@import "bourbon", "neat";
-@import "../bower_components/reflex-grid/scss/reflex";
+@import "bourbon";
 
 /*! HTML5 Boilerplate v5.0 | MIT License | http://h5bp.com/ */
 
@@ -271,6 +270,7 @@ a {
     color:white;
     font-size: modular-scale(-1);
     h3{
+        margin-top: 0.4em;
         margin-bottom: 0.4em;
         text-transform: uppercase;
         font-family: "Oswald", Helvetica, Arial, sans-serif;
