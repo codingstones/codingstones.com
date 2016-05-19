@@ -165,10 +165,10 @@ a {
     line-height: 0.9;
     margin-top: 0;
     margin-bottom: 0;
-    font-family: "Playfair Display","Times New Roman", Times, sans-serif;
+    font-family: "abril-fatface","Playfair Display","Times New Roman", Times, sans-serif;
     font-style: italic;
-    font-weight: 900;
-    letter-spacing: -0.03em; }
+    font-weight: 400;
+    letter-spacing: -0.05em; }
 
 .lead-list {
   position: absolute;
@@ -248,13 +248,9 @@ a {
     font-size: 1.3em; }
   h1 {
     margin-bottom: 0.2em;
-    font-family: "Playfair Display","Times New Roman", Times, sans-serif;
-    font-style: italic;
-    font-weight: 900;
+    font-family: "abril-fatface","Playfair Display","Times New Roman", Times, sans-serif;
     font-size: 14vw;
-    line-height: 0.9 !important;
-    text-transform: none;
-    letter-spacing: -0.03em;
+    line-height: 0.8 !important;
     color: #1C1C1C; }
   h2 {
     font-size: 1.9183589334em; }
