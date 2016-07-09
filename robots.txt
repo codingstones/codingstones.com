@@ -1,0 +1,3 @@
+User-agent: *
+Disallow: /public_files
+Disallow: /metodologia.html
