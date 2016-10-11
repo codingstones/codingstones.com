@@ -196,6 +196,9 @@ a {
     margin-top: 0;
     font-size: 1.4800357em;
     color: #1C1C1C; }
+  .sublead a {
+    color: #BD1622;
+    text-decoration: underline; }
 
 .subintro, .half, .team {
   font-size: 1.3em; }

@@ -256,6 +256,10 @@ a {
         font-size: modular-scale(1.5);
         color: $text-color;
     }
+    a {
+        color: $accent-color;
+        text-decoration: underline;
+    }
 }
 .subintro, .half, .team {
     font-size: modular-scale(0);
