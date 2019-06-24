@@ -1,0 +1,31 @@
+---
+layout: default
+---
+
+    <div class="container">
+        <div class="half team">
+            <h2>La Tienda</h2>
+            <p>Camisetas y sudaderas personalizables para coders con actitud.</p>
+        </div>
+      {% for shirt in site.data.shirts %}
+        {% capture thecycle %}{% cycle 'odd', 'even' %}{% endcapture %}
+        {% if thecycle == 'odd' %}
+        <div class="grid">
+        {% endif %}
+          <div class="column-team grid__col-sm-6 grid__col--bleed">
+             <a href="{{ shirt.url }}" target="_blank"><div class="grid">
+                 <div class="grid__col-3 grid__col--bleed">
+                     <img class="grid__cell-img" src="{{ shirt.image }}" alt="{{ shirt.name }}">
+                 </div>
+                 <div class="grid__col-9">
+                     <h4>{{ shirt.name }}</h4>
+                     <p>&nbsp;</p>
+                 </div>
+             </div></a>
+          </div>
+        {% if thecycle == 'even' %}
+        </div>
+        {% endif %}
+      {% endfor %}
+      <p><a href="">Volver</a></p>
+    </div>
